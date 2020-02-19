@@ -8,7 +8,7 @@ $(document).ready(function(){
 
       $.ajax({
         type: 'POST',
-        url: '/todo',
+        url: '/',
         data: todo,
         success: function(data){
           //do something with the data via front-end framework
@@ -25,7 +25,7 @@ $(document).ready(function(){
       console.log("deleteing is on action")
       $.ajax({
         type: 'DELETE',
-        url: '/todo/' + item,
+        url: '/' + item,
         success: function(data){
           //do something with the data via front-end framework
           location.reload();

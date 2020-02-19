@@ -1,3 +1,4 @@
+var PORT = process.env.PORT || 5000;
 var express = require("express");
 var todoController = require("./controllers/todoController");
 
@@ -25,5 +26,5 @@ app.use(express.static("./public"));
 //fire controller
 todoController(app);
 
-app.listen("3000")
-console.log("You are listening to port number 3000");
+app.listen(PORT, function() {
+  });
