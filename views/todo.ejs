@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <!-- <link rel="stylesheet" href="/assets/jquery-1.12.3.js"> -->
+    <!-- <script src="/assets/jquery-1.12.3.js"></script> -->
+    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+     <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+    <h1>My ToDo List</h1>
+    <div id="todo-table">
+        <form action="/todo" method="POST">
+            <input type="text" name="item" placeholder="Add a new item..." required>
+            <button type="submit">Add Item</button>
+        </form>
+        <ul>
+           <% for(var i = 0;i < todos.length; i++){ %>
+            <li><%=todos[i].item%></li>
+
+         <%  } %>
+        </ul>
+    </div>
+    <script src="/assets/todo-list.js"></script>
+    
+</body>
+</html>
