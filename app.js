@@ -15,6 +15,7 @@ var app = express();
 app.set("view engine", "ejs");
 
 
+
 //serving static files
 app.use(express.static("./public"));
 
